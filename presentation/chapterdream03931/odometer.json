@@ -1,0 +1,41 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{odometer.value}} {{odometer.unit}}"
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "Odometer",
+            "displayType": "state",
+            "state": {
+                "label": "{{odometer.value}} {{odometer.unit}}",
+                "unit": "odometer.unit"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Odometer",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "odometer.value",
+                    "valueType": "number",
+                    "unit": "odometer.unit",
+                    "range": [
+                        0,
+                        500000
+                    ]
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "chapterdream03931.odometer",
+    "version": 1
+}
