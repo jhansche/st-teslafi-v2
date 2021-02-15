@@ -1,0 +1,28 @@
+{
+    "id": "chapterdream03931.driveState",
+    "version": 1,
+    "status": "proposed",
+    "name": "Drive State",
+    "attributes": {
+        "driveState": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "string",
+                        "enum": [
+                            "drive",
+                            "park"
+                        ]
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value"
+                ]
+            },
+            "enumCommands": []
+        }
+    },
+    "commands": {}
+}

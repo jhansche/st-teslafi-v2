@@ -1,0 +1,72 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{driveState.value}}",
+                "alternatives": [
+                    {
+                        "key": "drive",
+                        "value": "D",
+                        "type": "active"
+                    },
+                    {
+                        "key": "park",
+                        "value": "P",
+                        "type": "inactive"
+                    }
+                ]
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "Car State",
+            "displayType": "state",
+            "state": {
+                "label": "{{driveState.value}}",
+                "alternatives": [
+                    {
+                        "key": "drive",
+                        "value": "Driving",
+                        "type": "active",
+                        "description": "The car is in Drive"
+                    },
+                    {
+                        "key": "park",
+                        "value": "Parked",
+                        "type": "inactive",
+                        "description": "The car is parked"
+                    }
+                ]
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Car State",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "park",
+                            "value": "Parked",
+                            "type": "inactive"
+                        },
+                        {
+                            "key": "drive",
+                            "value": "Driving",
+                            "type": "active"
+                        }
+                    ],
+                    "value": "driveState.value"
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "chapterdream03931.driveState",
+    "version": 1
+}
