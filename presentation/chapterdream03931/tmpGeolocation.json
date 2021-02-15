@@ -1,0 +1,78 @@
+{
+    "dashboard": {
+        "states": [],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "Speed",
+            "displayType": "state",
+            "state": {
+                "label": "{{speed.value}} {{speed.unit}}",
+                "alternatives": [
+                    {
+                        "key": "0",
+                        "value": "0",
+                        "type": "inactive"
+                    },
+                    {
+                        "key": "mph",
+                        "value": "MPH",
+                        "type": "active"
+                    },
+                    {
+                        "key": "kph",
+                        "value": "km/h",
+                        "type": "active"
+                    },
+                    {
+                        "key": "knots",
+                        "value": "knots",
+                        "type": "active"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Heading",
+            "displayType": "state",
+            "state": {
+                "label": "{{heading.value}} º"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Speed",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "speed.value",
+                    "valueType": "number",
+                    "unit": "speed.unit",
+                    "range": [
+                        0,
+                        300
+                    ]
+                }
+            },
+            {
+                "label": "Heading",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "heading.value",
+                    "valueType": "number",
+                    "unit": "heading.unit",
+                    "range": [
+                        0,
+                        360
+                    ]
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "chapterdream03931.tmpGeolocation",
+    "version": 1
+}
