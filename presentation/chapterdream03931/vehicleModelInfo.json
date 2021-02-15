@@ -1,0 +1,56 @@
+{
+    "dashboard": {
+        "states": [],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "Vehicle Model",
+            "displayType": "state",
+            "state": {
+                "label": "{{year.value}} {{make.value}} {{model.value}} {{trim.value}}"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Vehicle Make",
+                "displayType": "textField",
+                "textField": {
+                    "value": "make.value"
+                }
+            },
+            {
+                "label": "Vehicle Model",
+                "displayType": "textField",
+                "textField": {
+                    "value": "model.value"
+                }
+            },
+            {
+                "label": "Vehicle Model Trim",
+                "displayType": "textField",
+                "textField": {
+                    "value": "trim.value"
+                }
+            },
+            {
+                "label": "Vehicle Model Year",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "year.value",
+                    "valueType": "number",
+                    "range": [
+                        1900,
+                        2100
+                    ]
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "chapterdream03931.vehicleModelInfo",
+    "version": 1
+}
