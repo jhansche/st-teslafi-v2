@@ -1,0 +1,105 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{chargingState.value}}",
+                "alternatives": [
+                    {
+                        "key": "charging",
+                        "value": "Charging",
+                        "type": "active"
+                    },
+                    {
+                        "key": "not_charging",
+                        "value": "Not charging",
+                        "type": "inactive"
+                    },
+                    {
+                        "key": "completed",
+                        "value": "Completed",
+                        "type": "inactive"
+                    }
+                ]
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "displayType": "state",
+            "label": "Charging State",
+            "state": {
+                "alternatives": [
+                    {
+                        "key": "charging",
+                        "value": "Charging",
+                        "type": "active"
+                    },
+                    {
+                        "key": "not_charging",
+                        "value": "Not charging",
+                        "type": "inactive"
+                    },
+                    {
+                        "key": "completed",
+                        "value": "Completed",
+                        "type": "inactive"
+                    }
+                ]
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Charging State",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "charging",
+                            "value": "Charging",
+                            "type": "active"
+                        },
+                        {
+                            "key": "not_charging",
+                            "value": "Not Charging",
+                            "type": "inactive"
+                        },
+                        {
+                            "key": "completed",
+                            "value": "Completed",
+                            "type": "inactive"
+                        }
+                    ],
+                    "value": "chargingState.value",
+                    "multiSelection": true
+                }
+            }
+        ],
+        "actions": [
+            {
+                "label": "Charging State",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "startCharging",
+                            "value": "Start Charging",
+                            "type": "active"
+                        },
+                        {
+                            "key": "stopCharging",
+                            "value": "Stop Charging",
+                            "type": "inactive"
+                        }
+                    ]
+                },
+                "emphasis": true
+            }
+        ]
+    },
+    "id": "chapterdream03931.chargingState",
+    "version": 1
+}
