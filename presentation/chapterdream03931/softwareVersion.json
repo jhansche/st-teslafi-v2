@@ -1,0 +1,30 @@
+{
+    "dashboard": {
+        "states": [],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "Software Version",
+            "displayType": "state",
+            "state": {
+                "label": "{{swVersion.value}}"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Software Version",
+                "displayType": "textField",
+                "textField": {
+                    "value": "swVersion.value"
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "chapterdream03931.softwareVersion",
+    "version": 1
+}

@@ -1,0 +1,24 @@
+{
+    "id": "chapterdream03931.softwareVersion",
+    "version": 1,
+    "status": "proposed",
+    "name": "Software Version",
+    "attributes": {
+        "swVersion": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value"
+                ]
+            },
+            "enumCommands": []
+        }
+    },
+    "commands": {}
+}

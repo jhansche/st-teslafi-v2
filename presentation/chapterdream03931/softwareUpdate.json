@@ -1,0 +1,50 @@
+{
+    "dashboard": {
+        "states": [],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "Software Update",
+            "displayType": "state",
+            "state": {
+                "label": "{{updateAvailable.value}}",
+                "alternatives": [
+                    {
+                        "key": "none",
+                        "value": "None",
+                        "type": "inactive"
+                    }
+                ]
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Software Update Available",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "none",
+                            "value": "No Update",
+                            "type": "inactive"
+                        },
+                        {
+                            "key": "*",
+                            "value": "Update Available",
+                            "type": "active"
+                        }
+                    ],
+                    "value": "updateAvailable.value",
+                    "multiSelection": true
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "chapterdream03931.softwareUpdate",
+    "version": 1
+}

@@ -1,0 +1,27 @@
+{
+    "id": "chapterdream03931.softwareUpdate",
+    "version": 1,
+    "status": "proposed",
+    "name": "Software Update",
+    "attributes": {
+        "updateAvailable": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "required": []
+            },
+            "enumCommands": []
+        }
+    },
+    "commands": {
+        "checkForUpdate": {
+            "name": "checkForUpdate",
+            "arguments": []
+        }
+    }
+}
