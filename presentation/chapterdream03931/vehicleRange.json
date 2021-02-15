@@ -1,0 +1,41 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{range.value}} {{range.unit}} range"
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "Available Range",
+            "displayType": "state",
+            "state": {
+                "label": "{{range.value}} {{range.unit}}",
+                "unit": "range.unit"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Available Range",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "range.value",
+                    "valueType": "number",
+                    "unit": "range.unit",
+                    "range": [
+                        0,
+                        1000
+                    ]
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "chapterdream03931.vehicleRange",
+    "version": 1
+}

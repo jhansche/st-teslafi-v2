@@ -1,0 +1,29 @@
+{
+    "id": "chapterdream03931.vehicleRange",
+    "version": 1,
+    "status": "proposed",
+    "name": "Vehicle Range",
+    "attributes": {
+        "range": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "number"
+                    },
+                    "unit": {
+                        "type": "string",
+                        "enum": ["km", "mi"],
+                        "default": "mi"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value"
+                ]
+            },
+            "enumCommands": []
+        }
+    },
+    "commands": {}
+}
