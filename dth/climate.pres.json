@@ -2,21 +2,21 @@
     "dashboard": {
         "states": [
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "thermostatMode",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "thermostatSetpoint",
                 "version": 1,
                 "values": [],
@@ -25,21 +25,21 @@
         ],
         "actions": [
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "thermostatMode",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "thermostatSetpoint",
                 "version": 1,
                 "values": [],
@@ -49,21 +49,21 @@
     },
     "detailView": [
         {
-            "component": "main",
+            "component": "climate",
             "capability": "temperatureMeasurement",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "main",
+            "component": "climate",
             "capability": "thermostatMode",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "main",
+            "component": "climate",
             "capability": "thermostatSetpoint",
             "version": 1,
             "values": [],
@@ -73,21 +73,21 @@
     "automation": {
         "conditions": [
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "thermostatMode",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "thermostatSetpoint",
                 "version": 1,
                 "values": [],
@@ -96,21 +96,21 @@
         ],
         "actions": [
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "thermostatMode",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "climate",
                 "capability": "thermostatSetpoint",
                 "version": 1,
                 "values": [],
@@ -119,9 +119,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "b91b5b1e-dbbb-30e3-b8f4-98fc2ed59948",
+    "presentationId": "b337fdb0-9908-3d2a-96c9-aac49920eb27",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "b91b5b1e-dbbb-30e3-b8f4-98fc2ed59948",
+    "vid": "b337fdb0-9908-3d2a-96c9-aac49920eb27",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

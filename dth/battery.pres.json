@@ -2,14 +2,14 @@
     "dashboard": {
         "states": [
             {
-                "component": "main",
+                "component": "battery",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "battery",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -18,14 +18,14 @@
         ],
         "actions": [
             {
-                "component": "main",
+                "component": "battery",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "battery",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -35,14 +35,14 @@
     },
     "detailView": [
         {
-            "component": "main",
+            "component": "battery",
             "capability": "battery",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "main",
+            "component": "battery",
             "capability": "powerSource",
             "version": 1,
             "values": [],
@@ -52,14 +52,14 @@
     "automation": {
         "conditions": [
             {
-                "component": "main",
+                "component": "battery",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "battery",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -68,14 +68,14 @@
         ],
         "actions": [
             {
-                "component": "main",
+                "component": "battery",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "main",
+                "component": "battery",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -84,9 +84,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "0c3f3248-96b8-38a5-8823-5fd7a7d9a21a",
+    "presentationId": "2f8ab6c0-88dc-3805-bcd1-9c7b9086ca1d",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "0c3f3248-96b8-38a5-8823-5fd7a7d9a21a",
+    "vid": "2f8ab6c0-88dc-3805-bcd1-9c7b9086ca1d",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }
