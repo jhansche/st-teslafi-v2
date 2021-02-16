@@ -2,35 +2,35 @@
     "dashboard": {
         "states": [
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "powerMeter",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "timedSession",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "voltageMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "powerConsumptionReport",
                 "version": 1,
                 "values": [],
@@ -39,35 +39,35 @@
         ],
         "actions": [
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "powerMeter",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "timedSession",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "voltageMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "powerConsumptionReport",
                 "version": 1,
                 "values": [],
@@ -77,35 +77,35 @@
     },
     "detailView": [
         {
-            "component": "charger",
+            "component": "main",
             "capability": "energyMeter",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "charger",
+            "component": "main",
             "capability": "powerMeter",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "charger",
+            "component": "main",
             "capability": "timedSession",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "charger",
+            "component": "main",
             "capability": "voltageMeasurement",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "charger",
+            "component": "main",
             "capability": "powerConsumptionReport",
             "version": 1,
             "values": [],
@@ -115,35 +115,35 @@
     "automation": {
         "conditions": [
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "powerMeter",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "timedSession",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "voltageMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "powerConsumptionReport",
                 "version": 1,
                 "values": [],
@@ -152,35 +152,35 @@
         ],
         "actions": [
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "powerMeter",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "timedSession",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "voltageMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "charger",
+                "component": "main",
                 "capability": "powerConsumptionReport",
                 "version": 1,
                 "values": [],
@@ -189,9 +189,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "79aab459-3bed-30d7-81ea-74337761a61d",
+    "presentationId": "5de89b88-9c77-39e9-94a6-689f052edf57",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "79aab459-3bed-30d7-81ea-74337761a61d",
+    "vid": "5de89b88-9c77-39e9-94a6-689f052edf57",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

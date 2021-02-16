@@ -2,21 +2,21 @@
     "dashboard": {
         "states": [
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "thermostatMode",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "thermostatSetpoint",
                 "version": 1,
                 "values": [],
@@ -25,21 +25,21 @@
         ],
         "actions": [
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "thermostatMode",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "thermostatSetpoint",
                 "version": 1,
                 "values": [],
@@ -49,21 +49,21 @@
     },
     "detailView": [
         {
-            "component": "climate",
+            "component": "main",
             "capability": "temperatureMeasurement",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "climate",
+            "component": "main",
             "capability": "thermostatMode",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "climate",
+            "component": "main",
             "capability": "thermostatSetpoint",
             "version": 1,
             "values": [],
@@ -73,21 +73,21 @@
     "automation": {
         "conditions": [
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "thermostatMode",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "thermostatSetpoint",
                 "version": 1,
                 "values": [],
@@ -96,21 +96,21 @@
         ],
         "actions": [
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "thermostatMode",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "climate",
+                "component": "main",
                 "capability": "thermostatSetpoint",
                 "version": 1,
                 "values": [],

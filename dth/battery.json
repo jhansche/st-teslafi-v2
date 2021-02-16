@@ -2,14 +2,14 @@
     "dashboard": {
         "states": [
             {
-                "component": "battery",
+                "component": "main",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "battery",
+                "component": "main",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -18,14 +18,14 @@
         ],
         "actions": [
             {
-                "component": "battery",
+                "component": "main",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "battery",
+                "component": "main",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -35,14 +35,14 @@
     },
     "detailView": [
         {
-            "component": "battery",
+            "component": "main",
             "capability": "battery",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
-            "component": "battery",
+            "component": "main",
             "capability": "powerSource",
             "version": 1,
             "values": [],
@@ -52,14 +52,14 @@
     "automation": {
         "conditions": [
             {
-                "component": "battery",
+                "component": "main",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "battery",
+                "component": "main",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -68,14 +68,14 @@
         ],
         "actions": [
             {
-                "component": "battery",
+                "component": "main",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
                 "patch": []
             },
             {
-                "component": "battery",
+                "component": "main",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
