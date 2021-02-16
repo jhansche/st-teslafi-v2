@@ -5,3 +5,5 @@ smartthings presentation:device-config:create -j -i dth/car.json     -o dth/car.
 smartthings presentation:device-config:create -j -i dth/climate.json -o dth/climate.pres.json
 smartthings presentation:device-config:create -j -i dth/battery.json -o dth/battery.pres.json
 smartthings presentation:device-config:create -j -i dth/charger.json -o dth/charger.pres.json
+
+smartthings presentation:device-config:create -j -i dth/composite.json -o dth/composite.pres.json

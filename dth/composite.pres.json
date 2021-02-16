@@ -1,0 +1,666 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "component": "car",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.odometer",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "temperatureMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "thermostatMode",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "thermostatSetpoint",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "energyMeter",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "powerMeter",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "timedSession",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "voltageMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "powerConsumptionReport",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "temperatureMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "battery",
+                "capability": "battery",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "battery",
+                "capability": "powerSource",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.softwareVersion",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.softwareUpdate",
+                "version": 1,
+                "values": [],
+                "patch": []
+            }
+        ],
+        "actions": [
+            {
+                "component": "main",
+                "capability": "refresh",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "temperatureMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "temperatureMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "thermostatMode",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "thermostatSetpoint",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.softwareVersion",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.softwareUpdate",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "energyMeter",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "powerMeter",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "timedSession",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "voltageMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "powerConsumptionReport",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.odometer",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            }
+        ]
+    },
+    "detailView": [
+        {
+            "component": "battery",
+            "capability": "battery",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "battery",
+            "capability": "powerSource",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "climate",
+            "capability": "temperatureMeasurement",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "climate",
+            "capability": "thermostatMode",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "climate",
+            "capability": "thermostatSetpoint",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "charger",
+            "capability": "energyMeter",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "charger",
+            "capability": "powerMeter",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "charger",
+            "capability": "timedSession",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "charger",
+            "capability": "voltageMeasurement",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "charger",
+            "capability": "powerConsumptionReport",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "car",
+            "capability": "chapterdream03931.odometer",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "car",
+            "capability": "chapterdream03931.vehicleRange",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "car",
+            "capability": "chapterdream03931.driveState",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "car",
+            "capability": "chapterdream03931.vehicleModelInfo",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "car",
+            "capability": "chapterdream03931.tmpGeolocation",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "temperatureMeasurement",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "refresh",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "chapterdream03931.softwareVersion",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "chapterdream03931.softwareUpdate",
+            "version": 1,
+            "values": [],
+            "patch": []
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "component": "battery",
+                "capability": "battery",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "battery",
+                "capability": "powerSource",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "temperatureMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "thermostatMode",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "thermostatSetpoint",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "energyMeter",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "powerMeter",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "timedSession",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "voltageMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "powerConsumptionReport",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.odometer",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "temperatureMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "refresh",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.softwareVersion",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.softwareUpdate",
+                "version": 1,
+                "values": [],
+                "patch": []
+            }
+        ],
+        "actions": [
+            {
+                "component": "battery",
+                "capability": "battery",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "battery",
+                "capability": "powerSource",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "temperatureMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "thermostatMode",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "climate",
+                "capability": "thermostatSetpoint",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "energyMeter",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "powerMeter",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "timedSession",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "voltageMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "powerConsumptionReport",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.odometer",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "temperatureMeasurement",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "refresh",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.softwareVersion",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.softwareUpdate",
+                "version": 1,
+                "values": [],
+                "patch": []
+            }
+        ]
+    },
+    "type": "dth",
+    "presentationId": "ac7730d0-39cb-341c-9ada-cc56fd04efc0",
+    "manufacturerName": "SmartThingsCommunity",
+    "vid": "ac7730d0-39cb-341c-9ada-cc56fd04efc0",
+    "mnmn": "SmartThingsCommunity",
+    "version": "0.0.1"
+}
