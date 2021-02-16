@@ -53,7 +53,13 @@
             "capability": "temperatureMeasurement",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [
+                {
+                    "op": "replace",
+                    "path": "/0/label",
+                    "value": "Cabin Temperature"
+                }
+            ]
         },
         {
             "component": "main",
