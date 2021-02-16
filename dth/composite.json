@@ -97,7 +97,13 @@
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
-                "patch": []
+                "patch": [
+                    {
+                        "op": "replace",
+                        "path": "label",
+                        "value": "Outside Temperature"
+                    }
+                ]
             },
             {
                 "component": "battery",
@@ -312,7 +318,15 @@
             "capability": "voltageMeasurement",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [],
+            "visibleCondition": {
+                "component": "battery",
+                "capability": "powerSource",
+                "version": 1,
+                "value": "powerSource.value",
+                "operator": "DOES_NOT_EQUAL",
+                "operand": "battery"
+            }
         },
         {
             "component": "charger",
