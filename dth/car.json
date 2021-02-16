@@ -1,0 +1,192 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "component": "main",
+                "capability": "chapterdream03931.odometer",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            }
+        ],
+        "actions": [
+            {
+                "component": "main",
+                "capability": "chapterdream03931.odometer",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            }
+        ]
+    },
+    "detailView": [
+        {
+            "component": "main",
+            "capability": "chapterdream03931.odometer",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "chapterdream03931.vehicleRange",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "chapterdream03931.driveState",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "chapterdream03931.vehicleModelInfo",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "chapterdream03931.tmpGeolocation",
+            "version": 1,
+            "values": [],
+            "patch": []
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "component": "main",
+                "capability": "chapterdream03931.odometer",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            }
+        ],
+        "actions": [
+            {
+                "component": "main",
+                "capability": "chapterdream03931.odometer",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            }
+        ]
+    },
+    "type": "dth"
+}
