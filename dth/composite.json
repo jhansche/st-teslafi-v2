@@ -100,7 +100,7 @@
                 "patch": [
                     {
                         "op": "replace",
-                        "path": "label",
+                        "path": "/0/label",
                         "value": "Outside Temperature"
                     }
                 ]
