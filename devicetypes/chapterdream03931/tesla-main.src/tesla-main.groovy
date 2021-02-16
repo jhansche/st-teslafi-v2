@@ -21,7 +21,9 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "ac7730d0-39cb-341c-9ada-cc56fd04efc0"
+            // This is important for the multi-child composite devices!
+            mcdSync: true,
+            vid: "fe07fdd8-2621-3f78-a993-f0fd44de9e07"
     ) {
         capability "Refresh" // refresh()
 

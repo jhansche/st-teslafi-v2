@@ -21,7 +21,7 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "2f8ab6c0-88dc-3805-bcd1-9c7b9086ca1d"
+            vid: "0c3f3248-96b8-38a5-8823-5fd7a7d9a21a"
     ) {
         capability "Battery"
         capability "Power Source" // TODO: keep this here, or move to charger component?

@@ -21,7 +21,7 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "79aab459-3bed-30d7-81ea-74337761a61d"
+            vid: "5de89b88-9c77-39e9-94a6-689f052edf57"
     ) {
         capability "Energy Meter" // .energy = $ kWh
         capability "Power Meter" // .power = $ W

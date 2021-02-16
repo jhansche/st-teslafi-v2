@@ -21,7 +21,7 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "b337fdb0-9908-3d2a-96c9-aac49920eb27"
+            vid: "b91b5b1e-dbbb-30e3-b8f4-98fc2ed59948"
     ) {
         capability "Temperature Measurement"
         capability "Thermostat Mode" // .thermostatMode = [auto, off]
