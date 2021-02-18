@@ -97,13 +97,7 @@
                 "capability": "temperatureMeasurement",
                 "version": 1,
                 "values": [],
-                "patch": [
-                    {
-                        "op": "replace",
-                        "path": "/0/label",
-                        "value": "Outside Temperature"
-                    }
-                ]
+                "patch": []
             },
             {
                 "component": "battery",
@@ -276,7 +270,13 @@
             "capability": "temperatureMeasurement",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [
+                {
+                    "op": "replace",
+                    "path": "/0/label",
+                    "value": "Cabin Temperature"
+                }
+            ]
         },
         {
             "component": "climate",
@@ -375,7 +375,13 @@
             "capability": "temperatureMeasurement",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [
+                {
+                    "op": "replace",
+                    "path": "/0/label",
+                    "value": "Outside Temperature"
+                }
+            ]
         },
         {
             "component": "main",
