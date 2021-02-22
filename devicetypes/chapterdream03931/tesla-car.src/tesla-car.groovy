@@ -21,10 +21,9 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "f002ebb3-edea-3983-b1f1-c66cb25671ad"
+            vid: "80f2bcfc-cae9-3dc7-9f2d-541270cae673"
     ) {
         capability "chapterdream03931.odometer"
-        capability "chapterdream03931.vehicleRange"
         capability "chapterdream03931.driveState"
         capability "chapterdream03931.vehicleModelInfo"
         capability "chapterdream03931.tmpGeolocation"
@@ -68,7 +67,6 @@ def processData(data) {
         }
     }
     sendEvent(name: "odometer", value: data.vehicleState.odometer, unit: 'mi')
-    sendEvent(name: "range", value: data.chargeState.batteryRange, unit: 'mi')
 
     sendEvent(name: "heading", value: data.driveState.heading)
     sendEvent(name: "latitude", value: data.driveState.latitude)

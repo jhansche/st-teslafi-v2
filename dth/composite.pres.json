@@ -2,7 +2,7 @@
     "dashboard": {
         "states": [
             {
-                "component": "car",
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -221,7 +221,7 @@
                 "patch": []
             },
             {
-                "component": "car",
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -270,7 +270,13 @@
             "capability": "temperatureMeasurement",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [
+                {
+                    "op": "replace",
+                    "path": "/0/label",
+                    "value": "Cabin Temperature"
+                }
+            ]
         },
         {
             "component": "climate",
@@ -337,7 +343,7 @@
             "patch": []
         },
         {
-            "component": "car",
+            "component": "battery",
             "capability": "chapterdream03931.vehicleRange",
             "version": 1,
             "values": [],
@@ -369,7 +375,13 @@
             "capability": "temperatureMeasurement",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [
+                {
+                    "op": "replace",
+                    "path": "/0/label",
+                    "value": "Outside Temperature"
+                }
+            ]
         },
         {
             "component": "main",
@@ -473,7 +485,7 @@
                 "patch": []
             },
             {
-                "component": "car",
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -608,7 +620,7 @@
                 "patch": []
             },
             {
-                "component": "car",
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -666,9 +678,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "ccf7c9f0-c7e8-3920-bf45-da6c0e70ba2b",
+    "presentationId": "9c263772-d7b7-3623-ac4e-94fca61d1880",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "ccf7c9f0-c7e8-3920-bf45-da6c0e70ba2b",
+    "vid": "9c263772-d7b7-3623-ac4e-94fca61d1880",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

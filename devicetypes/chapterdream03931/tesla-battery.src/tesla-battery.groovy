@@ -21,9 +21,10 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "0c3f3248-96b8-38a5-8823-5fd7a7d9a21a"
+            vid: "cca85ccd-3f21-30ee-aaad-69b9d87d2c7e"
     ) {
         capability "Battery"
+        capability "chapterdream03931.vehicleRange"
         capability "Power Source" // TODO: keep this here, or move to charger component?
     }
 }
@@ -40,10 +41,11 @@ def processData(data) {
         log.error "No data found for ${device.deviceNetworkId}"
         return
     }
-    
+
     if (data.chargeState) {
         sendEvent(name: "battery", value: data.chargeState.battery, unit: '%')
-        
+        sendEvent(name: "range", value: data.chargeState.batteryRange, unit: 'mi')
+
         // TODO: maybe use connector presence instead?
         if (data.chargeState.chargingState == "not_charging") {
             sendEvent(name: "powerSource", value: "battery")

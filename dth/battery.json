@@ -3,6 +3,13 @@
         "states": [
             {
                 "component": "main",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
                 "capability": "battery",
                 "version": 1,
                 "values": [],
@@ -20,6 +27,13 @@
             {
                 "component": "main",
                 "capability": "battery",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -43,6 +57,13 @@
         },
         {
             "component": "main",
+            "capability": "chapterdream03931.vehicleRange",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
             "capability": "powerSource",
             "version": 1,
             "values": [],
@@ -60,6 +81,13 @@
             },
             {
                 "component": "main",
+                "capability": "chapterdream03931.vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -70,6 +98,13 @@
             {
                 "component": "main",
                 "capability": "battery",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
                 "patch": []

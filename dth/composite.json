@@ -2,7 +2,7 @@
     "dashboard": {
         "states": [
             {
-                "component": "car",
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -221,7 +221,7 @@
                 "patch": []
             },
             {
-                "component": "car",
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -343,7 +343,7 @@
             "patch": []
         },
         {
-            "component": "car",
+            "component": "battery",
             "capability": "chapterdream03931.vehicleRange",
             "version": 1,
             "values": [],
@@ -485,7 +485,7 @@
                 "patch": []
             },
             {
-                "component": "car",
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -620,7 +620,7 @@
                 "patch": []
             },
             {
-                "component": "car",
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],

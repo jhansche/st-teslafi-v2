@@ -10,13 +10,6 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
                 "capability": "chapterdream03931.driveState",
                 "version": 1,
                 "values": [],
@@ -41,13 +34,6 @@
             {
                 "component": "main",
                 "capability": "chapterdream03931.odometer",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -85,13 +71,6 @@
         },
         {
             "component": "main",
-            "capability": "chapterdream03931.vehicleRange",
-            "version": 1,
-            "values": [],
-            "patch": []
-        },
-        {
-            "component": "main",
             "capability": "chapterdream03931.driveState",
             "version": 1,
             "values": [],
@@ -117,13 +96,6 @@
             {
                 "component": "main",
                 "capability": "chapterdream03931.odometer",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -160,13 +132,6 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
                 "capability": "chapterdream03931.driveState",
                 "version": 1,
                 "values": [],
@@ -189,9 +154,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "f002ebb3-edea-3983-b1f1-c66cb25671ad",
+    "presentationId": "80f2bcfc-cae9-3dc7-9f2d-541270cae673",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "f002ebb3-edea-3983-b1f1-c66cb25671ad",
+    "vid": "80f2bcfc-cae9-3dc7-9f2d-541270cae673",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

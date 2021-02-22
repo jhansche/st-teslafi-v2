@@ -10,13 +10,6 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
                 "capability": "chapterdream03931.driveState",
                 "version": 1,
                 "values": [],
@@ -41,13 +34,6 @@
             {
                 "component": "main",
                 "capability": "chapterdream03931.odometer",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -85,13 +71,6 @@
         },
         {
             "component": "main",
-            "capability": "chapterdream03931.vehicleRange",
-            "version": 1,
-            "values": [],
-            "patch": []
-        },
-        {
-            "component": "main",
             "capability": "chapterdream03931.driveState",
             "version": 1,
             "values": [],
@@ -123,13 +102,6 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
                 "capability": "chapterdream03931.driveState",
                 "version": 1,
                 "values": [],
@@ -154,13 +126,6 @@
             {
                 "component": "main",
                 "capability": "chapterdream03931.odometer",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
                 "patch": []
