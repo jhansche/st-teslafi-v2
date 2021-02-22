@@ -55,6 +55,14 @@ def introTeslaFiToken() {
                     required: true
             )
         }
+        section("ETA Home") {
+        	paragraph "To report estimated time/distance to home, enter a Google API Key with the Google Distance Matrix API enabled."
+            input(name: "distanceApiEnabled", title: "Enable Google Distance API", type: "bool", defaultValue: false, required: false)
+            input(name: "distanceApiKey", title: "Google API Key", type: "text", required: false)
+            input(name: "distanceWithTraffic", title: "With realtime traffic?", type: "bool", required: false, defaultValue: false)
+            input(name: "distanceMinLatLongDelta", title: "Minimum distance between requests (deg?)", type: "number", required: false, defaultValue: 0.001)
+            input(name: "distanceMinTimeDelta", title: "Minimum time between requests (sec)", type: "number", required: false, defaultValue: 60)
+        }
     }
 }
 
@@ -67,6 +75,76 @@ def selectCars() {
             input(name: "selectedVehicles", type: "enum", required: true, multiple: false, options: state.accountVehicles)
         }
     }
+}
+
+def findEtaHome(double originLat, double originLong) {
+    // https://developers.google.com/maps/documentation/distance-matrix
+    //  $200 USD credit each month (first $200 free)
+    /*
+     * TODO:
+     *
+     * 1. If presenceSensor.presence == present: already home, do nothing
+     * 2. Otherwise, check current lat/long:
+     *    - if X delta from last < X: do nothing
+     *      - need to do a 
+     *    - otherwise: call distance api between lat/long & home location
+     *      - If state=driving, use departure_time=now, to get time in traffic (may be charged more)
+     *        Not setting this, means it will use the _average_ traffic model for current time of day and route, so maybe we don't need this.
+     * 3. LocationEta capability
+     *    distanceToLocation (mi)
+     *    etaToLocation (hr/min/sec)
+     *
+     * Configurations:
+     *  - API key to use
+     *  - Set $X distance to enable?
+     *  - Enable time-in-traffic mode?
+     */
+    if (!settings.distanceApiEnabled) {
+    	return [result: false, reason: "Disabled by SmartApp settings"]
+    }
+
+	if (!settings.distanceApiKey) {
+    	return [result: false, reason: "no api key"]
+    }
+    
+    if (!location.latitude || !location.longitude) {
+    	return [result: false, reason: "location coordinates not available"]
+    }
+    
+    def now = new Date().getTime()
+    if (state.lastDistanceCall && (now - state.lastDistanceCall) < 300000) { // min 5 minutes
+    	return [result: false, reason: "too fast"]
+    }
+    
+    def params = [
+    	uri: "https://maps.googleapis.com/maps/api/distancematrix/json",
+        query: [
+        	key: settings.distanceApiKey,
+            mode: "driving",
+            avoid: "tolls",
+            units: "imperial",
+            destinations: "${location.latitude},${location.longitude}",
+            origins: "${originLat},${originLong}"
+        ]
+    ]
+    // TODO? maybe not needed if average is sufficient
+    // if (settings.distanceWithTraffic) params.query.departure_time = "now"
+    def result = [result: false]
+    httpGet(params) { response ->
+    	result.raw = response.data
+        log.debug("JHH distance result ${result.raw}")
+        result.result = response.data?.status == "OK" &&
+                response.data.rows[0]?.elements[0]?.status == "OK"
+        if (result.result) {
+            result.time = response.data.rows[0].elements[0].duration
+            result.distance = response.data.rows[0].elements[0].distance
+        } else {
+        	result.reason = "response conditions failed, check .raw response"
+        }
+        // for rate limiting
+        state.lastDistanceCall = now
+    }
+    return result
 }
 
 def doCommand(command, expectResponse = "application/json") {
@@ -142,8 +220,8 @@ def refreshVehicles() {
     }
 
     result.driveState = [
-            latitude: data.latitude,
-            longitude: data.longitude,
+            latitude: data.latitude?.toDouble(),
+            longitude: data.longitude?.toDouble(),
             speed: (data.speed?.toInteger() ?: -1),
             heading: data.heading?.toInteger(),
             lastUpdateTime: data.Date,
