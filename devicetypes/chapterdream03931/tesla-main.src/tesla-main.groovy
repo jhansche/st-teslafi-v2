@@ -27,7 +27,7 @@ metadata {
     ) {
         capability "Refresh" // refresh()
 
-		capability "chapterdream03931.softwareVersion"
+        capability "chapterdream03931.softwareVersion"
         capability "chapterdream03931.softwareUpdate" // checkForUpdate()
 
         capability "Temperature Measurement" // for OUTSIDE temp only
@@ -43,43 +43,43 @@ def initialize() {
 }
 
 private ensureComponentDevices() {
-	log.debug("All child devices (before): ${getChildDevices()}")
+    log.debug("All child devices (before): ${getChildDevices()}")
 
-	def dni = device.deviceNetworkId
+    def dni = device.deviceNetworkId
     def children = getChildDevices()
     def d
-    
+
     d = children.find { it.deviceNetworkid == "${dni}:car" }
     if (d) {
-    	log.debug ":car device exists: $d"
+        log.debug ":car device exists: $d"
     } else {
-    	// create :car
+        // create :car
         addChildDevice("chapterdream03931", "Tesla (Car)", "${dni}:car", null, [completedSetup: true, label: "${device.displayName} (car)", isComponent: true, componentName: "car", componentLabel: "Car Data"])
     }
-    
+
     d = children.find { it.deviceNetworkid == "${dni}:climate" }
     if (d) {
-    	log.debug ":climate device exists: $d"
+        log.debug ":climate device exists: $d"
     } else {
         addChildDevice("chapterdream03931", "Tesla (Climate)", "${dni}:climate", null, [completedSetup: true, label: "${device.displayName} (climate)", isComponent: true, componentName: "climate", componentLabel: "Climate Data"])
     }
 
-	d = children.find { it.deviceNetworkid == "${dni}:battery" }
+    d = children.find { it.deviceNetworkid == "${dni}:battery" }
     if (d) {
-    	log.debug ":battery device exists: $d"
+        log.debug ":battery device exists: $d"
     } else {
         addChildDevice("chapterdream03931", "Tesla (Battery)", "${dni}:battery", null, [completedSetup: true, label: "${device.displayName} (battery)", isComponent: true, componentName: "battery", componentLabel: "Battery Data"])
     }
 
-	d = children.find { it.deviceNetworkid == "${dni}:charger" }
+    d = children.find { it.deviceNetworkid == "${dni}:charger" }
     if (d) {
-    	log.debug ":charger device exists: $d"
+        log.debug ":charger device exists: $d"
     } else {
         addChildDevice("chapterdream03931", "Tesla (Charger)", "${dni}:charger", null, [completedSetup: true, label: "${device.displayName} (charger)", isComponent: true, componentName: "charger", componentLabel: "Charging Data"])
     }
 
-	childDevices.each { it.initialize() }
-	log.debug("All child devices (after): ${getChildDevices()}")
+    childDevices.each { it.initialize() }
+    log.debug("All child devices (after): ${getChildDevices()}")
 }
 
 private processData(data) {
@@ -91,15 +91,15 @@ private processData(data) {
 
     sendEvent(name: "temperature", value: data.climateState.outsideTemp, unit: "F")
     sendEvent(name: "swVersion", value: data.version)
-    
+
     if (data.availableVersion) {
-    	sendEvent(name: "updateAvailable", value: data.availableVersion)
+        sendEvent(name: "updateAvailable", value: data.availableVersion)
     } else {
-    	sendEvent(name: "updateAvailable", value: "none")
+        sendEvent(name: "updateAvailable", value: "none")
     }
 
     // Dispatch to each child
-	childDevices.each { it.processData(data) }
+    childDevices.each { it.processData(data) }
 }
 
 def doRefresh() {
