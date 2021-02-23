@@ -371,6 +371,21 @@
             "patch": []
         },
         {
+            "component": "car",
+            "capability": "chapterdream03931.etaHome",
+            "version": 1,
+            "values": [],
+            "patch": [],
+            "visibleCondition": {
+                "capability": "presenceSensor",
+                "version": 1,
+                "component": "car",
+                "value": "presence.value",
+                "operator": "EQUALS",
+                "operand": "not present"
+            }
+        },
+        {
             "component": "main",
             "capability": "temperatureMeasurement",
             "version": 1,
@@ -678,9 +693,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "9c263772-d7b7-3623-ac4e-94fca61d1880",
+    "presentationId": "b4d2d1ab-0c00-393d-a10b-c751aaed6cb0",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "9c263772-d7b7-3623-ac4e-94fca61d1880",
+    "vid": "b4d2d1ab-0c00-393d-a10b-c751aaed6cb0",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

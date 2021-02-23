@@ -1,0 +1,70 @@
+{
+    "id": "chapterdream03931.homeEta",
+    "version": 1,
+    "status": "proposed",
+    "name": "Home ETA",
+    "attributes": {
+        "timeToHome": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "integer",
+                        "minimum": 0
+                    },
+                    "unit": {
+                        "type": "string",
+                        "enum": [
+                            "sec"
+                        ],
+                        "default": "sec"
+                    },
+                    "data": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "text"
+                        ],
+                        "properties": {
+                            "text": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value",
+                    "unit"
+                ]
+            },
+            "enumCommands": []
+        },
+        "distanceToHome": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "unit": {
+                        "type": "string",
+                        "enum": [
+                            "mi",
+                            "km"
+                        ],
+                        "default": "mi"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value",
+                    "unit"
+                ]
+            },
+            "enumCommands": []
+        }
+    },
+    "commands": {}
+}

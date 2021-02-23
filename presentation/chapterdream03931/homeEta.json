@@ -1,0 +1,54 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "ETA: {{timeToHome.data.text}}"
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "ETA to Home",
+            "displayType": "state",
+            "state": {
+                "value": "distanceToHome.value",
+                "label": "{{distanceToHome.value}} {{distanceToHome.unit}}\n{{timeToHome.data.text}}"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Time to Home",
+                "displayType": "slider",
+                "slider": {
+                    "value": "timeToHome.value",
+                    "valueType": "number",
+                    "unit": "timeToHome.unit",
+                    "range": [
+                        0,
+                        3600
+                    ]
+                }
+            },
+            {
+                "label": "Distance to Home",
+                "displayType": "slider",
+                "slider": {
+                    "value": "distanceToHome.value",
+                    "valueType": "number",
+                    "unit": "distanceToHome.unit",
+                    "range": [
+                        0,
+                        100
+                    ]
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "chapterdream03931.homeEta",
+    "version": 1
+}

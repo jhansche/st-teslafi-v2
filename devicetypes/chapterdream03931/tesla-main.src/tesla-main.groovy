@@ -23,7 +23,7 @@ metadata {
             ocfDeviceType: "oic.d.vehicleconnector",
             // This is important for the multi-child composite devices!
             mcdSync: true,
-            vid: "9c263772-d7b7-3623-ac4e-94fca61d1880"
+            vid: "b4d2d1ab-0c00-393d-a10b-c751aaed6cb0"
     ) {
         capability "Refresh" // refresh()
 

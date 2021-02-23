@@ -28,6 +28,21 @@
                 "version": 1,
                 "values": [],
                 "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.etaHome",
+                "version": 1,
+                "values": [],
+                "patch": [],
+                "visibleCondition": {
+                    "capability": "presenceSensor",
+                    "version": 1,
+                    "component": "main",
+                    "value": "presence.value",
+                    "operator": "EQUALS",
+                    "operand": "not present"
+                }
             }
         ],
         "actions": [
@@ -78,14 +93,29 @@
         },
         {
             "component": "main",
-            "capability": "chapterdream03931.vehicleModelInfo",
+            "capability": "chapterdream03931.tmpGeolocation",
             "version": 1,
             "values": [],
             "patch": []
         },
         {
             "component": "main",
-            "capability": "chapterdream03931.tmpGeolocation",
+            "capability": "chapterdream03931.etaHome",
+            "version": 1,
+            "values": [],
+            "patch": [],
+            "visibleCondition": {
+                "capability": "presenceSensor",
+                "version": 1,
+                "component": "main",
+                "value": "presence.value",
+                "operator": "EQUALS",
+                "operand": "not present"
+            }
+        },
+        {
+            "component": "main",
+            "capability": "chapterdream03931.vehicleModelInfo",
             "version": 1,
             "values": [],
             "patch": []
@@ -103,6 +133,13 @@
             {
                 "component": "main",
                 "capability": "chapterdream03931.driveState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "chapterdream03931.etaHome",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -154,9 +191,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "80f2bcfc-cae9-3dc7-9f2d-541270cae673",
+    "presentationId": "dd16ab30-3447-3784-b51f-f2c2f839f05a",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "80f2bcfc-cae9-3dc7-9f2d-541270cae673",
+    "vid": "dd16ab30-3447-3784-b51f-f2c2f839f05a",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

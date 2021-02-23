@@ -21,7 +21,7 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "80f2bcfc-cae9-3dc7-9f2d-541270cae673"
+            vid: "dd16ab30-3447-3784-b51f-f2c2f839f05a"
     ) {
         capability "chapterdream03931.odometer"
         capability "chapterdream03931.driveState"
@@ -29,10 +29,7 @@ metadata {
         capability "chapterdream03931.tmpGeolocation"
         capability "Presence Sensor"
         capability "Estimated Time of Arrival"
-
-        // TODO: move to capability
-        attribute "distanceToHome", "string"
-        attribute "timeToHome", "string"
+        capability "chapterdream03931.homeEta"
     }
 }
 
@@ -87,14 +84,13 @@ def processData(data) {
     if (device.currentValue("presence") == "not present") { // JHH not present
         def etaData = parent.parent.findEtaHome(data.driveState.latitude, data.driveState.longitude)
         log.debug("JHH eta response $etaData")
-        // Estimated Time Of Arrival
         if (etaData?.result == true) {
-            // TODO: switch to eta-home capability
-            sendEvent(name: "distanceToHome", value: etaData.distance.text)
-            sendEvent(name: "timeToHome", value: etaData.time.text)
+            def distanceInMiles = etaData.distance.value / 1.60934.toDouble()
+            sendEvent(name: "distanceToHome", value: distanceInMiles, unit: "mi")
+            sendEvent(name: "timeToHome", value: etaData.time.value, unit: "sec", data: [text: etaData.time.text])
+
             def eta = Calendar.getInstance(location.timeZone)
             eta.add(Calendar.SECOND, etaData.time.value)
-            // TODO: switch to a better eta-home capability, with both distance and time
             sendEvent(name: "eta", value: eta.time.format("yyyy-MM-dd'T'HH:mm:ss", location.timeZone))
         } else {
             log.debug("ETA failed: ${etaData}")
@@ -102,5 +98,7 @@ def processData(data) {
     } else {
         // Clear the ETA if we're already home
         sendEvent(name: "eta", value: null)
+        sendEvent(name: "distanceToHome", value: 0, unit: "mi")
+        sendEvent(name: "timeToHome", value: 0, unit: "sec", data: [text: ""])
     }
 }
