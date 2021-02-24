@@ -24,13 +24,6 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.vehicleModelInfo",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "car",
                 "capability": "chapterdream03931.tmpGeolocation",
                 "version": 1,
                 "values": [],
@@ -236,13 +229,6 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.vehicleModelInfo",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "car",
                 "capability": "chapterdream03931.tmpGeolocation",
                 "version": 1,
                 "values": [],
@@ -359,13 +345,6 @@
         {
             "component": "car",
             "capability": "chapterdream03931.driveState",
-            "version": 1,
-            "values": [],
-            "patch": []
-        },
-        {
-            "component": "car",
-            "capability": "chapterdream03931.vehicleModelInfo",
             "version": 1,
             "values": [],
             "patch": []
