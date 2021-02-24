@@ -226,13 +226,6 @@
                 "version": 1,
                 "values": [],
                 "patch": []
-            },
-            {
-                "component": "car",
-                "capability": "chapterdream03931.tmpGeolocation",
-                "version": 1,
-                "values": [],
-                "patch": []
             }
         ]
     },
@@ -240,6 +233,13 @@
         {
             "component": "battery",
             "capability": "battery",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "battery",
+            "capability": "chapterdream03931.vehicleRange",
             "version": 1,
             "values": [],
             "patch": []
@@ -336,13 +336,6 @@
             "patch": []
         },
         {
-            "component": "battery",
-            "capability": "chapterdream03931.vehicleRange",
-            "version": 1,
-            "values": [],
-            "patch": []
-        },
-        {
             "component": "car",
             "capability": "chapterdream03931.driveState",
             "version": 1,
@@ -361,15 +354,7 @@
             "capability": "chapterdream03931.etaHome",
             "version": 1,
             "values": [],
-            "patch": [],
-            "visibleCondition": {
-                "capability": "presenceSensor",
-                "version": 1,
-                "component": "car",
-                "value": "presence.value",
-                "operator": "EQUALS",
-                "operand": "not present"
-            }
+            "patch": []
         },
         {
             "component": "main",

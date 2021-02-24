@@ -21,7 +21,7 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "dd16ab30-3447-3784-b51f-f2c2f839f05a"
+            vid: "4b6980d6-7372-3f98-968f-a7f5aa1baa4c"
     ) {
         capability "chapterdream03931.odometer"
         capability "chapterdream03931.driveState"
@@ -81,7 +81,7 @@ def processData(data) {
         sendEvent(name: "speed", value: 0, unit: "mph")
     }
 
-    if (device.currentValue("presence") == "not present") { // JHH not present
+    if (device.currentValue("presence") == "not present") {
         def etaData = parent.parent.findEtaHome(data.driveState.latitude, data.driveState.longitude)
         log.debug("JHH eta response $etaData")
         if (etaData?.result == true) {
@@ -91,21 +91,14 @@ def processData(data) {
 
             def eta = Calendar.getInstance(location.timeZone)
             eta.add(Calendar.SECOND, etaData.time.value)
-            sendEvent(name: "eta", value: eta.time.format("yyyy-MM-dd'T'HH:mm:ss", location.timeZone))
+            sendEvent(name: "eta", value: eta.time.format("yyyy-MM-dd'T'HH:mm:ssZZZ", location.timeZone))
         } else {
             log.debug("ETA failed: ${etaData}")
         }
     } else {
         // Clear the ETA if we're already home
-        // sendEvent(name: "eta", value: null)
-        // sendEvent(name: "distanceToHome", value: 0, unit: "mi")
-        // sendEvent(name: "timeToHome", value: 0, unit: "sec", data: [text: ""])
-        
-        // XXX: testing
-        def eta = Calendar.getInstance(location.timeZone)
-        eta.add(Calendar.SECOND, 515)
-        sendEvent(name: "eta", value: eta.time.format("yyyy-MM-dd'T'HH:mm:ss", location.timeZone))
-        sendEvent(name: "distanceToHome", value: 23.7, unit: "mi")
-        sendEvent(name: "timeToHome", value: 1776, unit: "sec", data: [text: "29 min 36 sec"])
+        sendEvent(name: "distanceToHome", value: 0, unit: "mi")
+        sendEvent(name: "timeToHome", value: 0, unit: "sec", data: [text: ""])
+        sendEvent(name: "eta", value: null)
     }
 }
