@@ -85,7 +85,7 @@ def processData(data) {
         def etaData = parent.parent.findEtaHome(data.driveState.latitude, data.driveState.longitude)
         log.debug("JHH eta response $etaData")
         if (etaData?.result == true) {
-            def distanceInMiles = etaData.distance.value / 1.60934.toDouble()
+            def distanceInMiles = etaData.distance.value / 1609.34.toDouble()
             sendEvent(name: "distanceToHome", value: distanceInMiles, unit: "mi")
             sendEvent(name: "timeToHome", value: etaData.time.value, unit: "sec", data: [text: etaData.time.text])
 

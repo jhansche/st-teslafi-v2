@@ -56,7 +56,7 @@ def introTeslaFiToken() {
             )
         }
         section("ETA Home") {
-        	paragraph "To report estimated time/distance to home, enter a Google API Key with the Google Distance Matrix API enabled."
+            paragraph "To report estimated time/distance to home, enter a Google API Key with the Google Distance Matrix API enabled."
             input(name: "distanceApiEnabled", title: "Enable Google Distance API", type: "bool", defaultValue: false, required: false)
             input(name: "distanceApiKey", title: "Google API Key", type: "text", required: false)
             input(name: "distanceWithTraffic", title: "With realtime traffic?", type: "bool", required: false, defaultValue: false)
@@ -86,7 +86,7 @@ def findEtaHome(double originLat, double originLong) {
      * 1. If presenceSensor.presence == present: already home, do nothing
      * 2. Otherwise, check current lat/long:
      *    - if X delta from last < X: do nothing
-     *      - need to do a 
+     *      - need to do a
      *    - otherwise: call distance api between lat/long & home location
      *      - If state=driving, use departure_time=now, to get time in traffic (may be charged more)
      *        Not setting this, means it will use the _average_ traffic model for current time of day and route, so maybe we don't need this.
@@ -100,38 +100,38 @@ def findEtaHome(double originLat, double originLong) {
      *  - Enable time-in-traffic mode?
      */
     if (!settings.distanceApiEnabled) {
-    	return [result: false, reason: "Disabled by SmartApp settings"]
+        return [result: false, reason: "Disabled by SmartApp settings"]
     }
 
-	if (!settings.distanceApiKey) {
-    	return [result: false, reason: "no api key"]
+    if (!settings.distanceApiKey) {
+        return [result: false, reason: "no api key"]
     }
-    
+
     if (!location.latitude || !location.longitude) {
-    	return [result: false, reason: "location coordinates not available"]
+        return [result: false, reason: "location coordinates not available"]
     }
-    
+
     def now = new Date().getTime()
     if (state.lastDistanceCall && (now - state.lastDistanceCall) < 300000) { // min 5 minutes
-    	return [result: false, reason: "too fast"]
+        return [result: false, reason: "too fast"]
     }
-    
+
     def params = [
-    	uri: "https://maps.googleapis.com/maps/api/distancematrix/json",
-        query: [
-        	key: settings.distanceApiKey,
-            mode: "driving",
-            avoid: "tolls",
-            units: "imperial",
-            destinations: "${location.latitude},${location.longitude}",
-            origins: "${originLat},${originLong}"
-        ]
+            uri  : "https://maps.googleapis.com/maps/api/distancematrix/json",
+            query: [
+                    key         : settings.distanceApiKey,
+                    mode        : "driving",
+                    avoid       : "tolls",
+                    units       : "imperial",
+                    destinations: "${location.latitude},${location.longitude}",
+                    origins     : "${originLat},${originLong}"
+            ]
     ]
     // TODO? maybe not needed if average is sufficient
     // if (settings.distanceWithTraffic) params.query.departure_time = "now"
     def result = [result: false]
     httpGet(params) { response ->
-    	result.raw = response.data
+        result.raw = response.data
         log.debug("JHH distance result ${result.raw}")
         result.result = response.data?.status == "OK" &&
                 response.data.rows[0]?.elements[0]?.status == "OK"
@@ -139,7 +139,7 @@ def findEtaHome(double originLat, double originLong) {
             result.time = response.data.rows[0].elements[0].duration
             result.distance = response.data.rows[0].elements[0].distance
         } else {
-        	result.reason = "response conditions failed, check .raw response"
+            result.reason = "response conditions failed, check .raw response"
         }
         // for rate limiting
         state.lastDistanceCall = now
@@ -149,12 +149,12 @@ def findEtaHome(double originLat, double originLong) {
 
 def doCommand(command, expectResponse = "application/json") {
     def queryParams = [
-            token: fiToken,
+            token  : fiToken,
             command: command
     ]
     def params = [
-            uri: "https://www.teslafi.com/feed.php",
-            query: queryParams,
+            uri        : "https://www.teslafi.com/feed.php",
+            query      : queryParams,
             contentType: expectResponse ?: "application/json"
     ]
     def result = [:]
@@ -200,7 +200,7 @@ def refreshVehicles() {
         return
     }
 
-	// TODO: reorganize result{} object to easily map "main", "car", "climate", "battery", "charger" components
+    // TODO: reorganize result{} object to easily map "main", "car", "climate", "battery", "charger" components
 
     result.id = data.vehicle_id
     result.name = data.display_name
@@ -220,34 +220,34 @@ def refreshVehicles() {
     }
 
     result.driveState = [
-            latitude: data.latitude?.toDouble(),
-            longitude: data.longitude?.toDouble(),
-            speed: (data.speed?.toInteger() ?: -1),
-            heading: data.heading?.toInteger(),
+            latitude      : data.latitude?.toDouble(),
+            longitude     : data.longitude?.toDouble(),
+            speed         : (data.speed?.toInteger() ?: -1),
+            heading       : data.heading?.toInteger(),
             lastUpdateTime: data.Date,
     ]
     result.motion = result.driveState.speed > 0 ? "active" : "inactive"
 
     result.chargeState = [
-            chargingState: mapChargingState(data.charging_state),
-            batteryRange: data.battery_range?.toFloat(),
-            battery: data.battery_level?.toInteger(),
-            chargeMax: data.charge_limit_soc?.toFloat(),
+            chargingState     : mapChargingState(data.charging_state),
+            batteryRange      : data.battery_range?.toFloat(),
+            battery           : data.battery_level?.toInteger(),
+            chargeMax         : data.charge_limit_soc?.toFloat(),
 
-            hoursRemaining: data.time_to_full_charge?.toFloat(),
+            hoursRemaining    : data.time_to_full_charge?.toFloat(),
 
-            chargerVoltage: data.charger_voltage?.toInteger(), // = ~110 V
-            chargerCurrent: data.charger_actual_current?.toInteger(), // = 12A
-            chargerPowerKw: data.charger_power?.toFloat(), // = 1 kW; FIXME: this is horribly rounded,
-            chargerPower: (data.charger_voltage == null || data.charger_actual_current == null ? null : (
+            chargerVoltage    : data.charger_voltage?.toInteger(), // = ~110 V
+            chargerCurrent    : data.charger_actual_current?.toInteger(), // = 12A
+            chargerPowerKw    : data.charger_power?.toFloat(), // = 1 kW; FIXME: this is horribly rounded,
+            chargerPower      : (data.charger_voltage == null || data.charger_actual_current == null ? null : (
                     data.charger_voltage.toInteger() * data.charger_actual_current.toInteger()
             )), // = ~1320 W,
-            chargeEnergyAdded: data.charge_energy_added?.toFloat(), // charge_energy_added // 1.57 kWh
-            chargeRate: data.charge_rate?.toFloat(), // = ~0.6 MPH
+            chargeEnergyAdded : data.charge_energy_added?.toFloat(), // charge_energy_added // 1.57 kWh
+            chargeRate        : data.charge_rate?.toFloat(), // = ~0.6 MPH
 
             fastChargerPresent: data.fast_charger_present == "1",
-            fastChargerBrand: data.fast_charger_brand,
-            fastChargerType: data.fast_charger_type,
+            fastChargerBrand  : data.fast_charger_brand,
+            fastChargerType   : data.fast_charger_type,
 
             // chargerType: L1, L2, L3
             // Tesla Supercharging (see chargeNumber=632), powerSource=dc
@@ -271,14 +271,14 @@ def refreshVehicles() {
 
     result.location = [
             homeLink: data.homelink_nearby,
-            tagged: data.location,
+            tagged  : data.location,
     ]
     def isHome = result.location.tagged?.toLowerCase()?.contains("home") ||
             result.location.homeLink == "1"
 
     result.vehicleState = [
             presence: isHome ? "present" : "not present",
-            lock: data.locked == "1" ? "locked" : "unlocked",
+            lock    : data.locked == "1" ? "locked" : "unlocked",
             odometer: data.odometer?.toFloat(),
     ]
 
@@ -289,10 +289,10 @@ def refreshVehicles() {
     ]
 
     result.climateState = [
-            temperature: data.inside_tempF?.toInteger(),
+            temperature       : data.inside_tempF?.toInteger(),
             thermostatSetpoint: data.driver_temp_settingF,
-            thermostatMode: data.is_climate_on == "1" ? "auto" : "off",
-            outsideTemp: data.outside_tempF?.toInteger(), // FIXME: this isn't actually part of "climate"
+            thermostatMode    : data.is_climate_on == "1" ? "auto" : "off",
+            outsideTemp       : data.outside_tempF?.toInteger(), // FIXME: this isn't actually part of "climate"
     ]
 
     state.accountVehicles[result.id] = result.name
@@ -304,8 +304,8 @@ def refreshVehicles() {
 }
 
 String mapChargingState(String s) {
-	switch (s) {
-    	case "Complete": return "completed"
+    switch (s) {
+        case "Complete": return "completed"
         case "Disconnected": return "not_charging"
         case "Charging": return "charging"
     }

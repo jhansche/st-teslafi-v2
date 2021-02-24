@@ -115,6 +115,21 @@
         },
         {
             "component": "main",
+            "capability": "estimatedTimeOfArrival",
+            "version": 1,
+            "values": [],
+            "patch": [],
+            "visibleCondition": {
+                "capability": "presenceSensor",
+                "version": 1,
+                "component": "main",
+                "value": "presence.value",
+                "operator": "EQUALS",
+                "operand": "not present"
+            }
+        },
+        {
+            "component": "main",
             "capability": "chapterdream03931.vehicleModelInfo",
             "version": 1,
             "values": [],
@@ -191,9 +206,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "dd16ab30-3447-3784-b51f-f2c2f839f05a",
+    "presentationId": "e9448b7b-eb60-384b-ae4c-732dfac9fca6",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "dd16ab30-3447-3784-b51f-f2c2f839f05a",
+    "vid": "e9448b7b-eb60-384b-ae4c-732dfac9fca6",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

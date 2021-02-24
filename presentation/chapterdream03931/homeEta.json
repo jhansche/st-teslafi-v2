@@ -14,7 +14,7 @@
             "displayType": "state",
             "state": {
                 "value": "distanceToHome.value",
-                "label": "{{distanceToHome.value}} {{distanceToHome.unit}}\n{{timeToHome.data.text}}"
+                "label": "{{distanceToHome.value}} {{distanceToHome.unit}}: {{timeToHome.data.text}}"
             }
         }
     ],
