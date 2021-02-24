@@ -3,6 +3,13 @@
         "states": [
             {
                 "component": "main",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
@@ -78,6 +85,13 @@
     "detailView": [
         {
             "component": "main",
+            "capability": "chapterdream03931.chargingState",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
             "capability": "energyMeter",
             "version": 1,
             "values": [],
@@ -116,6 +130,13 @@
         "conditions": [
             {
                 "component": "main",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
@@ -151,6 +172,13 @@
             }
         ],
         "actions": [
+            {
+                "component": "main",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
             {
                 "component": "main",
                 "capability": "energyMeter",

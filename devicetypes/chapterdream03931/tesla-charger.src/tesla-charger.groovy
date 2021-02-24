@@ -21,7 +21,7 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "5de89b88-9c77-39e9-94a6-689f052edf57"
+            vid: "cf1ea00c-665a-3c4f-996f-70368f4b7ced"
     ) {
         capability "Energy Meter" // .energy = $ kWh
         capability "Power Meter" // .power = $ W
@@ -30,7 +30,9 @@ metadata {
         capability "Timed Session" // .completionTime, .sessionStatus; https://docs.smartthings.com/en/latest/capabilities-reference.html#id97
         capability "Voltage Measurement" // .voltage = $ V
         capability "Power Consumption Report" // https://docs.smartthings.com/en/latest/capabilities-reference.html#id63
-        
+
+        capability "chapterdream03931.chargingState"
+
         attribute "chargeTimeRemaining", "number"
     }
 }
@@ -47,39 +49,19 @@ def processData(data) {
         log.error "No data found for ${device.deviceNetworkId}"
         return
     }
-    
+
     if (data.chargeState) {
         sendEvent(name: "chargingState", value: data.chargeState.chargingState)
         //sendEvent(name: "chargeMax", value: data.chargeState.chargeMax, unit: '%')
-
-        // TODO: do this here, or leave in battery?
-        /*
-        if (data.chargeState.chargingState == "not_charging") {
-            sendEvent(name: "powerSource", value: "battery")
-        } else if (data.chargeState.fastChargerPresent) {
-            // Assuming that fastChargerPresent => Supercharger => DC
-            sendEvent(name: "powerSource", value: "dc")
-        } else {
-            sendEvent(name: "powerSource", value: "mains")
-        }
-        */
 
         sendEvent(name: "energy", value: data.chargeState.chargeEnergyAdded, unit: 'kWh')
         sendEvent(name: "voltage", value: data.chargeState.chargerVoltage, unit: 'V')
         sendEvent(name: "power", value: data.chargeState.chargerPower, unit: 'W')
 
-		if (state.lastEnergy && state.lastEnergy < data.chargeState.chargeEnergyAdded) {
-/*
-   - report value as json: {"energy": #, "deltaEnergy": #}
-   - https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/devicetypes/smartthings/zigbee-metering-plug-power-consumption-report.src
-				Map reportMap = [:]
-				reportMap["energy"] = currentEnergy
-				reportMap["deltaEnergy"] = deltaEnergy 
-				sendEvent("name": "powerConsumption", "value": reportMap.encodeAsJSON(), displayed: false)
-*/
-			// TODO: verify if this is right?
-			def consumption = ["energy": data.chargeState.chargeEnergyAdded, "deltaEnergy": data.chargeState.chargeEnergyAdded - state.lastEnergy]
-            sendEvent("name": "powerConsumption", "value": reportMap.encodeAsJSON(), displayed: false)
+        if (state.lastEnergy && state.lastEnergy < data.chargeState.chargeEnergyAdded) {
+            // https://github.com/SmartThingsCommunity/SmartThingsPublic/blob/master/devicetypes/smartthings/zigbee-metering-plug-power-consumption-report.src
+            def consumption = ["energy": data.chargeState.chargeEnergyAdded, "deltaEnergy": data.chargeState.chargeEnergyAdded - state.lastEnergy]
+            sendEvent("name": "powerConsumption", "value": consumption.encodeAsJSON(), displayed: false)
         }
         state.lastEnergy = data.chargeState.chargeEnergyAdded ?: 0
 

@@ -3,6 +3,13 @@
         "states": [
             {
                 "component": "main",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
@@ -78,6 +85,13 @@
     "detailView": [
         {
             "component": "main",
+            "capability": "chapterdream03931.chargingState",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
             "capability": "energyMeter",
             "version": 1,
             "values": [],
@@ -114,6 +128,13 @@
     ],
     "automation": {
         "conditions": [
+            {
+                "component": "main",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
             {
                 "component": "main",
                 "capability": "energyMeter",
@@ -153,6 +174,13 @@
         "actions": [
             {
                 "component": "main",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
@@ -189,9 +217,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "5de89b88-9c77-39e9-94a6-689f052edf57",
+    "presentationId": "cf1ea00c-665a-3c4f-996f-70368f4b7ced",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "5de89b88-9c77-39e9-94a6-689f052edf57",
+    "vid": "cf1ea00c-665a-3c4f-996f-70368f4b7ced",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }
