@@ -294,6 +294,13 @@
         },
         {
             "component": "charger",
+            "capability": "chapterdream03931.chargingState",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "charger",
             "capability": "energyMeter",
             "version": 1,
             "values": [],
@@ -459,6 +466,13 @@
             },
             {
                 "component": "charger",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
@@ -594,6 +608,13 @@
             },
             {
                 "component": "charger",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
@@ -693,9 +714,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "b4d2d1ab-0c00-393d-a10b-c751aaed6cb0",
+    "presentationId": "e563230b-d0fa-3541-a484-786804f50892",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "b4d2d1ab-0c00-393d-a10b-c751aaed6cb0",
+    "vid": "e563230b-d0fa-3541-a484-786804f50892",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

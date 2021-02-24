@@ -294,6 +294,13 @@
         },
         {
             "component": "charger",
+            "capability": "chapterdream03931.chargingState",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "charger",
             "capability": "energyMeter",
             "version": 1,
             "values": [],
@@ -459,6 +466,13 @@
             },
             {
                 "component": "charger",
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
                 "capability": "energyMeter",
                 "version": 1,
                 "values": [],
@@ -588,6 +602,13 @@
             {
                 "component": "climate",
                 "capability": "thermostatSetpoint",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "charger",
+                "capability": "chapterdream03931.chargingState",
                 "version": 1,
                 "values": [],
                 "patch": []
