@@ -30,6 +30,7 @@
             "displayType": "state",
             "label": "Charging State",
             "state": {
+                "value": "chargingState.value",
                 "alternatives": [
                     {
                         "key": "charging",
