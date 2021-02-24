@@ -97,8 +97,15 @@ def processData(data) {
         }
     } else {
         // Clear the ETA if we're already home
-        sendEvent(name: "eta", value: null)
-        sendEvent(name: "distanceToHome", value: 0, unit: "mi")
-        sendEvent(name: "timeToHome", value: 0, unit: "sec", data: [text: ""])
+        // sendEvent(name: "eta", value: null)
+        // sendEvent(name: "distanceToHome", value: 0, unit: "mi")
+        // sendEvent(name: "timeToHome", value: 0, unit: "sec", data: [text: ""])
+        
+        // XXX: testing
+        def eta = Calendar.getInstance(location.timeZone)
+        eta.add(Calendar.SECOND, 515)
+        sendEvent(name: "eta", value: eta.time.format("yyyy-MM-dd'T'HH:mm:ss", location.timeZone))
+        sendEvent(name: "distanceToHome", value: 23.7, unit: "mi")
+        sendEvent(name: "timeToHome", value: 1776, unit: "sec", data: [text: "29 min 36 sec"])
     }
 }
