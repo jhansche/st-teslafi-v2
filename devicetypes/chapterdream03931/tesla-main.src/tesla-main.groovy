@@ -115,8 +115,18 @@ def doRefresh() {
 
 // Only use this for the manual refresh tile action
 def refresh() {
+    if (state.refreshing) {
+        log.warn("Skipping doRefresh() because refreshing==true", new Throwable())
+        return
+    }
+
     log.debug "Triggering refresh by command"
-    doRefresh()
+    try {
+        state.refreshing = true
+        doRefresh()
+    } finally {
+        state.refreshing = false
+    }
 }
 
 def refreshWhileDriving() {
