@@ -102,7 +102,15 @@
             "capability": "powerMeter",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [],
+            "visibleCondition": {
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "component": "main",
+                "value": "chargingState.value",
+                "operator": "EQUALS",
+                "operand": "charging"
+            }
         },
         {
             "component": "main",
@@ -217,9 +225,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "cf1ea00c-665a-3c4f-996f-70368f4b7ced",
+    "presentationId": "d970006e-5923-322a-9c95-249c349a167d",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "cf1ea00c-665a-3c4f-996f-70368f4b7ced",
+    "vid": "d970006e-5923-322a-9c95-249c349a167d",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

@@ -313,12 +313,12 @@
             "values": [],
             "patch": [],
             "visibleCondition": {
-                "component": "battery",
-                "capability": "powerSource",
+                "component": "charger",
+                "capability": "chapterdream03931.chargingState",
                 "version": 1,
-                "value": "powerSource.value",
-                "operator": "DOES_NOT_EQUAL",
-                "operand": "battery"
+                "value": "chargingState.value",
+                "operator": "EQUALS",
+                "operand": "charging"
             }
         },
         {

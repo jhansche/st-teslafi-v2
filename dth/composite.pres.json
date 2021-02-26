@@ -313,12 +313,12 @@
             "values": [],
             "patch": [],
             "visibleCondition": {
-                "capability": "powerSource",
+                "capability": "chapterdream03931.chargingState",
                 "version": 1,
-                "component": "battery",
-                "value": "powerSource.value",
-                "operator": "DOES_NOT_EQUAL",
-                "operand": "battery"
+                "component": "charger",
+                "value": "chargingState.value",
+                "operator": "EQUALS",
+                "operand": "charging"
             }
         },
         {
@@ -686,9 +686,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "131af116-7a3f-31e1-b2a3-9cbcab52ff93",
+    "presentationId": "73d9a52f-c47f-3b7f-8b88-eb69117f6e1a",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "131af116-7a3f-31e1-b2a3-9cbcab52ff93",
+    "vid": "73d9a52f-c47f-3b7f-8b88-eb69117f6e1a",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

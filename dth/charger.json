@@ -102,7 +102,15 @@
             "capability": "powerMeter",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [],
+            "visibleCondition": {
+                "capability": "chapterdream03931.chargingState",
+                "version": 1,
+                "component": "main",
+                "value": "chargingState.value",
+                "operator": "EQUALS",
+                "operand": "charging"
+            }
         },
         {
             "component": "main",
