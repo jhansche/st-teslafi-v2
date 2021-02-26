@@ -354,7 +354,15 @@
             "capability": "chapterdream03931.homeEta",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [],
+            "visibleCondition": {
+                "capability": "presenceSensor",
+                "version": 1,
+                "component": "car",
+                "value": "presence.value",
+                "operator": "EQUALS",
+                "operand": "not present"
+            }
         },
         {
             "component": "main",

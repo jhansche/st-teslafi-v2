@@ -354,7 +354,15 @@
             "capability": "chapterdream03931.homeEta",
             "version": 1,
             "values": [],
-            "patch": []
+            "patch": [],
+            "visibleCondition": {
+                "capability": "presenceSensor",
+                "version": 1,
+                "component": "car",
+                "value": "presence.value",
+                "operator": "EQUALS",
+                "operand": "not present"
+            }
         },
         {
             "component": "main",
@@ -678,9 +686,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "05ea062f-1d1b-3e94-bff6-a200a381661b",
+    "presentationId": "131af116-7a3f-31e1-b2a3-9cbcab52ff93",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "05ea062f-1d1b-3e94-bff6-a200a381661b",
+    "vid": "131af116-7a3f-31e1-b2a3-9cbcab52ff93",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }
