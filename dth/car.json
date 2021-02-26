@@ -31,7 +31,7 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.etaHome",
+                "capability": "chapterdream03931.homeEta",
                 "version": 1,
                 "values": [],
                 "patch": [],
@@ -93,7 +93,7 @@
         },
         {
             "component": "main",
-            "capability": "chapterdream03931.etaHome",
+            "capability": "chapterdream03931.homeEta",
             "version": 1,
             "values": [],
             "patch": [],
@@ -147,7 +147,7 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.etaHome",
+                "capability": "chapterdream03931.homeEta",
                 "version": 1,
                 "values": [],
                 "patch": []

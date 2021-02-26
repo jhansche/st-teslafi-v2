@@ -21,7 +21,7 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "4b6980d6-7372-3f98-968f-a7f5aa1baa4c"
+            vid: "734f6b40-f5a0-3229-bde3-635b63f3fdda"
     ) {
         capability "chapterdream03931.odometer"
         capability "chapterdream03931.driveState"

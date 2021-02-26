@@ -31,7 +31,7 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.etaHome",
+                "capability": "chapterdream03931.homeEta",
                 "version": 1,
                 "values": [],
                 "patch": [],
@@ -93,7 +93,7 @@
         },
         {
             "component": "main",
-            "capability": "chapterdream03931.etaHome",
+            "capability": "chapterdream03931.homeEta",
             "version": 1,
             "values": [],
             "patch": [],
@@ -147,7 +147,7 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.etaHome",
+                "capability": "chapterdream03931.homeEta",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -199,9 +199,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "4b6980d6-7372-3f98-968f-a7f5aa1baa4c",
+    "presentationId": "734f6b40-f5a0-3229-bde3-635b63f3fdda",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "4b6980d6-7372-3f98-968f-a7f5aa1baa4c",
+    "vid": "734f6b40-f5a0-3229-bde3-635b63f3fdda",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

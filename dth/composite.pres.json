@@ -351,7 +351,7 @@
         },
         {
             "component": "car",
-            "capability": "chapterdream03931.etaHome",
+            "capability": "chapterdream03931.homeEta",
             "version": 1,
             "values": [],
             "patch": []
@@ -678,9 +678,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "e108da66-017b-375f-9af4-ad91c3ac2515",
+    "presentationId": "05ea062f-1d1b-3e94-bff6-a200a381661b",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "e108da66-017b-375f-9af4-ad91c3ac2515",
+    "vid": "05ea062f-1d1b-3e94-bff6-a200a381661b",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }
