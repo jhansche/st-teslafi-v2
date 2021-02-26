@@ -13,7 +13,6 @@
             "label": "ETA to Home",
             "displayType": "state",
             "state": {
-                "value": "distanceToHome.value",
                 "label": "{{distanceToHome.value}} {{distanceToHome.unit}}: {{timeToHome.data.text}}"
             }
         }
