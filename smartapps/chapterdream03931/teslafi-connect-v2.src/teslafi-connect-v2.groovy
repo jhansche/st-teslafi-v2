@@ -13,6 +13,12 @@
  *  for the specific language governing permissions and limitations under the License.
  *
  */
+
+import groovy.transform.Field
+
+/** Radius of the earth, in kilometers. */
+@Field final double EARTH_RADIUS = 6371
+
 definition(
         name: "TeslaFi (Connect) v2",
         namespace: "chapterdream03931",
@@ -60,7 +66,7 @@ def introTeslaFiToken() {
             input(name: "distanceApiEnabled", title: "Enable Google Distance API", type: "bool", defaultValue: false, required: false)
             input(name: "distanceApiKey", title: "Google API Key", type: "text", required: false)
             input(name: "distanceWithTraffic", title: "With realtime traffic?", type: "bool", required: false, defaultValue: false)
-            input(name: "distanceMinLatLongDelta", title: "Minimum distance between requests (deg?)", type: "number", required: false, defaultValue: 0.001)
+            input(name: "distanceMinLatLongDelta", title: "Minimum distance between requests (meters)", type: "number", required: false, defaultValue: 1000)
             input(name: "distanceMinTimeDelta", title: "Minimum time between requests (sec)", type: "number", required: false, defaultValue: 60)
         }
     }
@@ -111,9 +117,23 @@ def findEtaHome(double originLat, double originLong) {
         return [result: false, reason: "location coordinates not available"]
     }
 
+    if (state.lastOriginCoords) {
+        // NOTE: we don't just pass in the device's currentValue(latitude/longitude), because the device may still
+        // be on the move. We want to calculate the distance only when the car has moved outside of a bounding radius
+        // from the last time we made the Distance Matrix API call. If we don't make the call, we won't update the
+        // last-calculated coordinates, until the device moves outside that radius, and then that new location becomes
+        // the new last-calculated coordinates and requires a new radius delta.
+        def approxDistanceDelta = earthDistanceInKm([originLat, originLong], state.lastOriginCoords)
+
+        if (approxDistanceDelta < settings.distanceMinLatLongDelta) {
+            return [result: false, reason: "Distance has changed by less than ${settings.distanceMinLatLongDelta}: $approxDistanceDelta m"]
+        }
+        log.debug("JHH Distance changed by ${approxDistanceDelta} m")
+    }
+
     def now = new Date().getTime()
-    if (state.lastDistanceCall && (now - state.lastDistanceCall) < 300000) { // min 5 minutes
-        return [result: false, reason: "too fast"]
+    if (state.lastDistanceCall && (now - state.lastDistanceCall) / 1000 < settings.distanceMinTimeDelta) {
+        return [result: false, reason: "too fast; min time delta=${settings.distanceMinTimeDelta}"]
     }
 
     def params = [
@@ -143,8 +163,26 @@ def findEtaHome(double originLat, double originLong) {
         }
         // for rate limiting
         state.lastDistanceCall = now
+        state.lastOriginCoords = [originLat, originLong]
     }
     return result
+}
+
+/**
+ * @param point1 The first point, an array of [latitude, longitude] coordinates
+ * @param point2 The second point, an array of [latitude, longitude] coordinates
+ * @return approximate distance, in kilometers
+ */
+private double earthDistanceInKm(double[] point1, double[] point2) {
+    def lat1 = Math.toRadians(point1[0])
+    def lon1 = Math.toRadians(point1[1])
+    def lat2 = Math.toRadians(point2[0])
+    def lon2 = Math.toRadians(point2[1])
+    def dlon = lon2 - lon1
+    def dlat = lat2 - lat1
+    def a = Math.pow(Math.sin(dlat / 2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(dlon / 2), 2)
+    def c = 2 * Math.asin(Math.sqrt(a))
+    return c * EARTH_RADIUS
 }
 
 def doCommand(command, expectResponse = "application/json") {
