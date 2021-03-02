@@ -9,12 +9,32 @@
             "label": "Software Update",
             "displayType": "state",
             "state": {
-                "label": "{{updateAvailable.value}}",
+                "label": "Raw {{updateStatus.value}}",
                 "alternatives": [
                     {
                         "key": "none",
                         "value": "None",
                         "type": "inactive"
+                    },
+                    {
+                        "key": "downloading",
+                        "value": "Now Downloading: {{updateStatus.data.newVersion}}",
+                        "type": "active"
+                    },
+                    {
+                        "key": "available",
+                        "value": "Update Available: {{updateStatus.data.newVersion}}",
+                        "type": "active"
+                    },
+                    {
+                        "key": "scheduled",
+                        "value": "Scheduled to Install: {{updateStatus.data.newVersion}}",
+                        "type": "active"
+                    },
+                    {
+                        "key": "installing",
+                        "value": "Now Installing: {{updateStatus.data.newVersion}}",
+                        "type": "active"
                     }
                 ]
             }
@@ -23,7 +43,7 @@
     "automation": {
         "conditions": [
             {
-                "label": "Software Update Available",
+                "label": "Software Update Status",
                 "displayType": "list",
                 "list": {
                     "alternatives": [
@@ -33,12 +53,27 @@
                             "type": "inactive"
                         },
                         {
-                            "key": "*",
-                            "value": "Update Available",
+                            "key": "downloading",
+                            "value": "Downloading",
+                            "type": "active"
+                        },
+                        {
+                            "key": "available",
+                            "value": "Available",
+                            "type": "active"
+                        },
+                        {
+                            "key": "scheduled",
+                            "value": "Scheduled",
+                            "type": "active"
+                        },
+                        {
+                            "key": "installing",
+                            "value": "Installing",
                             "type": "active"
                         }
                     ],
-                    "value": "updateAvailable.value",
+                    "value": "updateStatus.value",
                     "multiSelection": true
                 }
             }

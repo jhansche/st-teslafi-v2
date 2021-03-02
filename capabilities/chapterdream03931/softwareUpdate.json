@@ -4,16 +4,35 @@
     "status": "proposed",
     "name": "Software Update",
     "attributes": {
-        "updateAvailable": {
+        "updateStatus": {
             "schema": {
                 "type": "object",
                 "properties": {
                     "value": {
-                        "type": "string"
+                        "type": "string",
+                        "enum": [
+                            "none",
+                            "downloading",
+                            "available",
+                            "scheduled",
+                            "installing"
+                        ]
+                    },
+                    "data": {
+                        "type": "object",
+                        "properties": {
+                            "newVersion": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": []
                     }
                 },
                 "additionalProperties": false,
-                "required": []
+                "required": [
+                    "value"
+                ]
             },
             "enumCommands": []
         }

@@ -252,9 +252,9 @@ def refreshVehicles() {
 
     result.optionCodes = data.option_codes?.tokenize(", ")
 
-    if (data.newVersionStatus == "available") {
-        // "newVersion":"2020.48.35.5","newVersionStatus":"available"
-        result.availableVersion = data.newVersion
+    result.newVersionStatus = data.newVersionStatus
+    if (data.newVersion != result.version) {
+        result.newVersion = data.newVersion
     }
 
     result.driveState = [

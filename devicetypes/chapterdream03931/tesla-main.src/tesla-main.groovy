@@ -92,10 +92,12 @@ private processData(data) {
     sendEvent(name: "temperature", value: data.climateState.outsideTemp, unit: "F")
     sendEvent(name: "swVersion", value: data.version)
 
-    if (data.availableVersion) {
-        sendEvent(name: "updateAvailable", value: data.availableVersion)
+    if (data.newVersionStatus) {
+        def versionData = [:]
+        if (data.newVersion) versionData.newVersion = data.newVersion
+        sendEvent(name: "updateStatus", value: data.newVersionStatus, data: versionData)
     } else {
-        sendEvent(name: "updateAvailable", value: "none")
+        sendEvent(name: "updateStatus", value: "none", data: [:])
     }
 
     // Dispatch to each child
