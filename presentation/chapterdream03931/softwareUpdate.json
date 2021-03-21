@@ -9,7 +9,7 @@
             "label": "Software Update",
             "displayType": "state",
             "state": {
-                "label": "Raw {{updateStatus.value}}",
+                "label": "{{updateStatus.value}}",
                 "alternatives": [
                     {
                         "key": "none",
@@ -18,25 +18,32 @@
                     },
                     {
                         "key": "downloading",
-                        "value": "Now Downloading: {{updateStatus.data.newVersion}}",
+                        "value": "Downloading",
                         "type": "active"
                     },
                     {
                         "key": "available",
-                        "value": "Update Available: {{updateStatus.data.newVersion}}",
+                        "value": "Update Available",
                         "type": "active"
                     },
                     {
                         "key": "scheduled",
-                        "value": "Scheduled to Install: {{updateStatus.data.newVersion}}",
+                        "value": "Scheduled to Install",
                         "type": "active"
                     },
                     {
                         "key": "installing",
-                        "value": "Now Installing: {{updateStatus.data.newVersion}}",
+                        "value": "Installing: {{updateStatus.data.newVersion}}",
                         "type": "active"
                     }
                 ]
+            }
+        },
+        {
+            "label": "Software Update Version",
+            "displayType": "state",
+            "state": {
+                "label": "{{updateStatus.data.newVersion}}"
             }
         }
     ],

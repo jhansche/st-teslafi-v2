@@ -9,6 +9,7 @@
                 "type": "object",
                 "properties": {
                     "value": {
+                        "title": "Software Update Status",
                         "type": "string",
                         "enum": [
                             "none",
@@ -22,6 +23,7 @@
                         "type": "object",
                         "properties": {
                             "newVersion": {
+                                "title": "New Version",
                                 "type": "string"
                             }
                         },
