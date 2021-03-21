@@ -528,6 +528,13 @@
                 "patch": []
             },
             {
+                "component": "car",
+                "capability": "chapterdream03931.homeEta",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
                 "component": "main",
                 "capability": "temperatureMeasurement",
                 "version": 1,
@@ -700,9 +707,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "4d65b22f-980a-3786-8c89-4c2e372083ff",
+    "presentationId": "76b96207-4b81-3f07-8ef7-d65d98e8ea50",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "4d65b22f-980a-3786-8c89-4c2e372083ff",
+    "vid": "76b96207-4b81-3f07-8ef7-d65d98e8ea50",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }
