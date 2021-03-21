@@ -10,10 +10,17 @@
     },
     "detailView": [
         {
-            "label": "ETA to Home",
+            "label": "ETA to Home 2",
             "displayType": "state",
             "state": {
-                "label": "{{distanceToHome.value}} {{distanceToHome.unit}} {{distanceToHome.text}}"
+                "label": "{{timeToHome.value}} {{timeToHome.unit}}: {{timeToHome.data.text}}"
+            }
+        },
+        {
+            "label": "Distance to Home 2",
+            "displayType": "state",
+            "state": {
+                "label": "{{distanceToHome.value}} {{distanceToHome.unit}}"
             }
         }
     ],
