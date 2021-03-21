@@ -127,6 +127,13 @@
             "version": 1,
             "values": [],
             "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "presenceSensor",
+            "version": 1,
+            "values": [],
+            "patch": []
         }
     ],
     "automation": {
@@ -155,6 +162,13 @@
             {
                 "component": "main",
                 "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "presenceSensor",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -199,9 +213,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "734f6b40-f5a0-3229-bde3-635b63f3fdda",
+    "presentationId": "db1a20e4-9420-3e59-b004-736e6e622f7b",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "734f6b40-f5a0-3229-bde3-635b63f3fdda",
+    "vid": "db1a20e4-9420-3e59-b004-736e6e622f7b",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

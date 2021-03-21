@@ -351,6 +351,13 @@
         },
         {
             "component": "car",
+            "capability": "presenceSensor",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "car",
             "capability": "chapterdream03931.homeEta",
             "version": 1,
             "values": [],
@@ -509,6 +516,13 @@
             {
                 "component": "car",
                 "capability": "chapterdream03931.tmpGeolocation",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "car",
+                "capability": "presenceSensor",
                 "version": 1,
                 "values": [],
                 "patch": []

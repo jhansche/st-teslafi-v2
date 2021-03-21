@@ -127,6 +127,13 @@
             "version": 1,
             "values": [],
             "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "presenceSensor",
+            "version": 1,
+            "values": [],
+            "patch": []
         }
     ],
     "automation": {
@@ -155,6 +162,13 @@
             {
                 "component": "main",
                 "capability": "chapterdream03931.vehicleModelInfo",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
+                "capability": "presenceSensor",
                 "version": 1,
                 "values": [],
                 "patch": []
