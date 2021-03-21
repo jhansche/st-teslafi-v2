@@ -1,1 +1,9 @@
 smartthings.log
+
+# Gradle files
+settings.gradle
+build.gradle
+local.properties
+gradlew*
+gradle/
+.gradle/
