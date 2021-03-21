@@ -173,7 +173,7 @@ def findEtaHome(double originLat, double originLong) {
  * @param point2 The second point, an array of [latitude, longitude] coordinates
  * @return approximate distance, in kilometers
  */
-private double earthDistanceInKm(double[] point1, double[] point2) {
+private double earthDistanceInKm(List<Double> point1, List<Double> point2) {
     def lat1 = Math.toRadians(point1[0])
     def lon1 = Math.toRadians(point1[1])
     def lat2 = Math.toRadians(point2[0])
