@@ -54,13 +54,14 @@ def processData(data) {
         if (data.optionCodes.contains("MDL3")) {
             sendEvent(name: "make", value: "Tesla")
             sendEvent(name: "model", value: "Model 3")
+            sendEvent(name: "trim", value: "LR AWD")
 
-            if (data.optionCodes.contains("BT37") && data.optionCodes.contains("DV4W")) {
-                sendEvent(name: "trim", value: "LR AWD")
-                // TODO: other trim codes (RWD, MR, SR, etc)
-                //  https://tesla-api.timdorr.com/vehicle/optioncodes
-                // FIXME: these option codes aren't valid anymore
-            }
+            // TODO: other trim codes (RWD, MR, SR, etc)
+            //  https://tesla-api.timdorr.com/vehicle/optioncodes
+            // FIXME: these option codes aren't valid anymore
+            // if (data.optionCodes.contains("BT37") && data.optionCodes.contains("DV4W")) {
+            //     sendEvent(name: "trim", value: "LR AWD")
+            // }
         }
     }
     sendEvent(name: "odometer", value: data.vehicleState.odometer, unit: 'mi')
@@ -91,7 +92,9 @@ def processData(data) {
 
             def eta = Calendar.getInstance(location.timeZone)
             eta.add(Calendar.SECOND, etaData.time.value)
-            sendEvent(name: "eta", value: eta.time.format("yyyy-MM-dd'T'HH:mm:ssZZZ", location.timeZone))
+            def etaString = eta.time.format("yyyy-MM-dd'T'HH:mm:ssZZZ", location.timeZone)
+            log.debug("ETA string: '${etaString}'")
+            sendEvent(name: "eta", value: etaString)
         } else {
             log.debug("ETA failed: ${etaData}")
         }
