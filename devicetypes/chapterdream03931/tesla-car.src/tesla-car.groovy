@@ -21,11 +21,11 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "fa446fdc-9a42-3a31-bf85-c39a40bea68a"
+            vid: "bbbaa734-4448-3748-a1e7-cc3858b78551"
     ) {
-        capability "Vehicle Odometer"
+        capability "vehicleOdometer"
+        capability "vehicleInformation"
         capability "chapterdream03931.driveState"
-        capability "chapterdream03931.vehicleModelInfo"
         capability "chapterdream03931.tmpGeolocation"
         capability "Presence Sensor"
         capability "Estimated Time of Arrival"
@@ -46,15 +46,17 @@ def processData(data) {
         return
     }
 
+    sendEvent(name: "vehicleId", value: data.vin)
     if (data.vin?.substring(9, 10) == "J") {
-        sendEvent(name: "year", value: 2018)
+        sendEvent(name: "vehicleYear", value: 2018)
         // TODO: other VIN attributes
     }
     if (data.optionCodes?.size() > 0) {
         if (data.optionCodes.contains("MDL3")) {
-            sendEvent(name: "make", value: "Tesla")
-            sendEvent(name: "model", value: "Model 3")
-            sendEvent(name: "trim", value: "LR AWD")
+            sendEvent(name: "vehicleMake", value: "Tesla")
+            sendEvent(name: "vehicleModel", value: "Model 3")
+            sendEvent(name: "vehicleTrim", value: "LR AWD")
+            sendEvent(name: "vehicleColor", value: "Midnight Silver Metallic")
 
             // TODO: other trim codes (RWD, MR, SR, etc)
             //  https://tesla-api.timdorr.com/vehicle/optioncodes

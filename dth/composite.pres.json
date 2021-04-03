@@ -508,7 +508,7 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.vehicleModelInfo",
+                "capability": "vehicleInformation",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -664,13 +664,6 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.vehicleModelInfo",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "car",
                 "capability": "chapterdream03931.tmpGeolocation",
                 "version": 1,
                 "values": [],
@@ -707,9 +700,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "51bdf21a-9ef9-36e7-bfea-65e0cfff2477",
+    "presentationId": "c88b3f11-2c28-33f5-b20f-f1c74ab767d4",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "51bdf21a-9ef9-36e7-bfea-65e0cfff2477",
+    "vid": "c88b3f11-2c28-33f5-b20f-f1c74ab767d4",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

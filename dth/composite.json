@@ -508,7 +508,7 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.vehicleModelInfo",
+                "capability": "vehicleInformation",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -658,13 +658,6 @@
             {
                 "component": "car",
                 "capability": "chapterdream03931.driveState",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "car",
-                "capability": "chapterdream03931.vehicleModelInfo",
                 "version": 1,
                 "values": [],
                 "patch": []
