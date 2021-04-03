@@ -3,6 +3,13 @@
         "states": [
             {
                 "component": "battery",
+                "capability": "vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -214,13 +221,6 @@
                 "patch": []
             },
             {
-                "component": "battery",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
                 "component": "car",
                 "capability": "chapterdream03931.driveState",
                 "version": 1,
@@ -233,6 +233,13 @@
         {
             "component": "battery",
             "capability": "battery",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "battery",
+            "capability": "vehicleRange",
             "version": 1,
             "values": [],
             "patch": []
@@ -494,6 +501,13 @@
             },
             {
                 "component": "battery",
+                "capability": "vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -649,13 +663,6 @@
                 "patch": []
             },
             {
-                "component": "battery",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
                 "component": "car",
                 "capability": "chapterdream03931.driveState",
                 "version": 1,
@@ -700,9 +707,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "c88b3f11-2c28-33f5-b20f-f1c74ab767d4",
+    "presentationId": "1e958dc9-97a9-30d3-8566-78cc0aee0f61",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "c88b3f11-2c28-33f5-b20f-f1c74ab767d4",
+    "vid": "1e958dc9-97a9-30d3-8566-78cc0aee0f61",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

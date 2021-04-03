@@ -21,10 +21,11 @@ metadata {
             mnmn: "SmartThingsCommunity",
             // ocfDeviceType: "x.com.st.d.tesla",
             ocfDeviceType: "oic.d.vehicleconnector",
-            vid: "cca85ccd-3f21-30ee-aaad-69b9d87d2c7e"
+            vid: "10d5db11-3a18-3eeb-b48b-d0bdca6eaf6a"
     ) {
         capability "Battery"
-        capability "chapterdream03931.vehicleRange"
+        capability "vehicleRange"
+        capability "chapterdream03931.vehicleRange" // deprecated
         capability "Power Source" // TODO: keep this here, or move to charger component?
     }
 }
@@ -44,7 +45,8 @@ def processData(data) {
 
     if (data.chargeState) {
         sendEvent(name: "battery", value: data.chargeState.battery, unit: '%')
-        sendEvent(name: "range", value: data.chargeState.batteryRange, unit: 'mi')
+        sendEvent(name: "range", value: data.chargeState.batteryRange, unit: 'mi') // deprecated
+        sendEvent(name: "estimatedRemainingRange", value: data.chargeState.batteryRange, unit: 'mi')
 
         // TODO: maybe use connector presence instead?
         if (data.chargeState.chargingState == "not_charging") {

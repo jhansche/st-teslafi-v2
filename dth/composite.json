@@ -3,6 +3,13 @@
         "states": [
             {
                 "component": "battery",
+                "capability": "vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -214,13 +221,6 @@
                 "patch": []
             },
             {
-                "component": "battery",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
                 "component": "car",
                 "capability": "chapterdream03931.driveState",
                 "version": 1,
@@ -233,6 +233,13 @@
         {
             "component": "battery",
             "capability": "battery",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "battery",
+            "capability": "vehicleRange",
             "version": 1,
             "values": [],
             "patch": []
@@ -494,6 +501,13 @@
             },
             {
                 "component": "battery",
+                "capability": "vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "battery",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -644,13 +658,6 @@
             {
                 "component": "car",
                 "capability": "vehicleOdometer",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "battery",
-                "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
                 "patch": []

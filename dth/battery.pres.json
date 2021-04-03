@@ -3,6 +3,13 @@
         "states": [
             {
                 "component": "main",
+                "capability": "vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -33,13 +40,6 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -51,6 +51,13 @@
         {
             "component": "main",
             "capability": "battery",
+            "version": 1,
+            "values": [],
+            "patch": []
+        },
+        {
+            "component": "main",
+            "capability": "vehicleRange",
             "version": 1,
             "values": [],
             "patch": []
@@ -81,6 +88,13 @@
             },
             {
                 "component": "main",
+                "capability": "vehicleRange",
+                "version": 1,
+                "values": [],
+                "patch": []
+            },
+            {
+                "component": "main",
                 "capability": "chapterdream03931.vehicleRange",
                 "version": 1,
                 "values": [],
@@ -104,13 +118,6 @@
             },
             {
                 "component": "main",
-                "capability": "chapterdream03931.vehicleRange",
-                "version": 1,
-                "values": [],
-                "patch": []
-            },
-            {
-                "component": "main",
                 "capability": "powerSource",
                 "version": 1,
                 "values": [],
@@ -119,9 +126,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "cca85ccd-3f21-30ee-aaad-69b9d87d2c7e",
+    "presentationId": "10d5db11-3a18-3eeb-b48b-d0bdca6eaf6a",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "cca85ccd-3f21-30ee-aaad-69b9d87d2c7e",
+    "vid": "10d5db11-3a18-3eeb-b48b-d0bdca6eaf6a",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }
