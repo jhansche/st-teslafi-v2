@@ -3,7 +3,7 @@
         "states": [
             {
                 "component": "main",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -48,7 +48,7 @@
         "actions": [
             {
                 "component": "main",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -72,7 +72,7 @@
     "detailView": [
         {
             "component": "main",
-            "capability": "chapterdream03931.odometer",
+            "capability": "vehicleOdometer",
             "version": 1,
             "values": [],
             "patch": []
@@ -140,7 +140,7 @@
         "conditions": [
             {
                 "component": "main",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -184,7 +184,7 @@
         "actions": [
             {
                 "component": "main",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -213,9 +213,9 @@
         ]
     },
     "type": "dth",
-    "presentationId": "db1a20e4-9420-3e59-b004-736e6e622f7b",
+    "presentationId": "fa446fdc-9a42-3a31-bf85-c39a40bea68a",
     "manufacturerName": "SmartThingsCommunity",
-    "vid": "db1a20e4-9420-3e59-b004-736e6e622f7b",
+    "vid": "fa446fdc-9a42-3a31-bf85-c39a40bea68a",
     "mnmn": "SmartThingsCommunity",
     "version": "0.0.1"
 }

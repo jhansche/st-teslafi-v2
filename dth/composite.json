@@ -10,7 +10,7 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -208,7 +208,7 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -330,7 +330,7 @@
         },
         {
             "component": "car",
-            "capability": "chapterdream03931.odometer",
+            "capability": "vehicleOdometer",
             "version": 1,
             "values": [],
             "patch": []
@@ -487,7 +487,7 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -643,7 +643,7 @@
             },
             {
                 "component": "car",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []

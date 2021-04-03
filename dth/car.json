@@ -3,7 +3,7 @@
         "states": [
             {
                 "component": "main",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -48,7 +48,7 @@
         "actions": [
             {
                 "component": "main",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -72,7 +72,7 @@
     "detailView": [
         {
             "component": "main",
-            "capability": "chapterdream03931.odometer",
+            "capability": "vehicleOdometer",
             "version": 1,
             "values": [],
             "patch": []
@@ -140,7 +140,7 @@
         "conditions": [
             {
                 "component": "main",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
@@ -184,7 +184,7 @@
         "actions": [
             {
                 "component": "main",
-                "capability": "chapterdream03931.odometer",
+                "capability": "vehicleOdometer",
                 "version": 1,
                 "values": [],
                 "patch": []
